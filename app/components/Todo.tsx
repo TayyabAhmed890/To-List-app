@@ -1,5 +1,5 @@
 "use client"
-import React from 'react'
+import React, { JSXElementConstructor } from 'react'
 import { useState } from 'react'
 
 interface Task {
@@ -7,7 +7,7 @@ interface Task {
   desc: string;
 }
 
-const Todo = () => {
+const Todo:React.FC = () => {
 
 //Decleare Variables
 
@@ -41,7 +41,7 @@ const Todo = () => {
     setTask(copyTask)
   }
 
-  let RenderTask:any = <h1>No Task Available</h1> 
+  let RenderTask = <h1>No Task Available</h1> 
 
   if (task.length > 0) {
     RenderTask = task.map((t,i)=>{
