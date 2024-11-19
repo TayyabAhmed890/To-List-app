@@ -41,7 +41,7 @@ const Todo:React.FC = () => {
     setTask(copyTask)
   }
 
-  let RenderTask = <h1>No Task Available</h1> 
+  let RenderTask: JSX.Element | JSX.Element[] = <h1>No Task Available</h1> 
 
   if (task.length > 0) {
     RenderTask = task.map((t,i)=>{
